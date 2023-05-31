@@ -25,6 +25,9 @@ public class App {
         // Endpoint: POST /games/{game_id}/guesses
         post("/games/:game_id/guesses", "application/json", (request, response) -> gameController.makeGuess(request, response), new JsonTransformer());
 
+        // Endpoint: DELETE /games/{game_id}
+        delete("/games/:game_id", (request, response) -> gameController.deleteGame(request, response), new JsonTransformer());
+
         // handle illegal arguments.
         exception(IllegalArgumentException.class, (e, req, res) -> {
             res.status(400);
