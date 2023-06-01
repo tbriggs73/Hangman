@@ -13,7 +13,11 @@ The following methods have been created in the Game class to enable the retrieva
 - getUnmaskedWord()
 - getIncorrectGuesses()
 - getStatus()
-- setStatus(String status) 
+- setStatus(String status)
+
+## Changes made to App class
+
+Implementation of a DELETE endpoint
 
 ## Changes made to GameController class
 1. Addition of a deleteGame() method which removes a valid game from the games HashMap
